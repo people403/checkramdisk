@@ -4,7 +4,7 @@
 #!/bin/bash
 
 clear
-echo -n "Check /003[32mRamdisk/003[0m//003[31mNonramdisk /003[32mLoading..."
+echo -n "Check \003[32mRamdisk\003[0m/\003[31mNonramdisk \003[32mLoading..."
 
 for i in $(seq 1 10); do
     echo -n ""
@@ -15,8 +15,10 @@ clear
 sleep 4
 if grep -q "rootfs" /proc/mounts; then
     echo "\033[33mYour Phone \003[32mUse Ramdisk."
+    echo "If there are bugs/errors, report them to @magiskpeople gmail"
 else
     echo "\033[32mYour Phone \033[31mNot Use Ramdisk."
+    echo "\003[31mIf there are bugs/errors, \003[32mreport them to @magiskpeople gmail"
 fi
 sleep 4
 clear
@@ -24,4 +26,4 @@ echo "\033[32mDon't Forget Read \003[31mReadme \033[33mRamdisk/Nonramdisk"
 sleep 4
 clear
 sleep 4
-echo "\003[033[32mDone!"
+echo "\003[32mDone!"
