@@ -65,3 +65,11 @@ Joining a forum like XDA Developers for your device can help, as the community t
 Conclusion
 
 Changing the status of "RAM disk: no" to "yes" on a device without a ramdisk is actually unnecessary, unless you really need a ramdisk for a special function. Magisk itself is smart enough to work without a ramdisk by modifying the recovery partition. However, if you want to experiment, make sure to make a full backup and understand the risks, because a small mistake can cause the device to bootloop.
+
+## Run Script With Termux/Terminal
+- apt install git -y
+- git clone https://github.com/people403/checkramdisk
+- cd checkramdisk
+- ls
+- sh checkramdisk.sh
+- done!
