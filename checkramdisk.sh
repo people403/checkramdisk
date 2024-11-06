@@ -17,12 +17,12 @@ sleep 4
 
 if grep -q "rootfs" /proc/mounts; then
     echo "\033[31mYour Phone Use Ramdisk. \n"
-    echo "\033[31mIf There Are Bugs/Errors, 
-    Report Them To @magiskpeople Gmail \n"
+    echo "\033[31mIf There Are Bugs/Errors.\n"
+    echo "Report Them To @magiskpeople Gmail. \n"
 else
     echo "\033[31mYour Phone Not Use Ramdisk. \n"
-    echo "\033[31mIf There Are Bugs/Errors, 
-    Report Them To @magiskpeople Gmail\033[0m"
+    echo "\033[31mIf There Are Bugs/Errors.\n"
+    echo "Report Them To @magiskpeople Gmail. \033[0m"
 fi
 
 sleep 10
