@@ -4,7 +4,7 @@
 #!/bin/bash
 
 clear
-echo -n "Checking Use Ramdisk/Nonramdisk..."
+echo -n "Checking Ramdisk/Nonramdisk..."
 
 for i in $(seq 1 10); do
     echo -n "."
