@@ -1,0 +1,2 @@
+# checkramdisk
+RAMDISK SCRIPT EFFECTIVE 🔥
