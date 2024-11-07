@@ -2,29 +2,35 @@
 
 clear
 echo "Checking if your device is using Ramdisk..."
+sleep 4
 
-# Periksa apakah rootfs adalah ramdisk (ini adalah indikasi awal bahwa ramdisk digunakan)
 if grep -q "rootfs" /proc/mounts; then
-    echo -e "\033[32mYour device is using Ramdisk as the root filesystem.\033[0m"
+    echo "\033[32mYour device is using Ramdisk as the root filesystem.\033[0m"
+    sleep 4
 else
-    echo -e "\033[31mYour device is NOT using Ramdisk.\033[0m"
+    echo "\033[31mYour device is NOT using Ramdisk.\033[0m"
+    sleep 4
 fi
 
-# Cek apakah initramfs ada di boot command line
 if dmesg | grep -q "initramfs"; then
-    echo -e "\033[32minitramfs is detected in boot log. This indicates Ramdisk usage.\033[0m"
+    echo "\033[32minitramfs is detected in boot log. This indicates Ramdisk usage.\033[0m"
+    sleep 4
 else
-    echo -e "\033[31minitramfs is NOT detected. Your device may not be using Ramdisk.\033[0m"
+    echo "\033[31minitramfs is NOT detected. Your device may not be using Ramdisk.\033[0m"
+    sleep 4
 fi
 
-# Periksa file '/proc/cmdline' untuk melihat parameter booting
 echo "Checking boot parameters..."
+sleep 5
 if grep -q "init=/init" /proc/cmdline; then
-    echo -e "\033[32minitramfs might be used as part of boot process (init=/init in cmdline).\033[0m"
+    echo "\033[32minitramfs might be used as part of boot process (init=/init in cmdline).\033[0m"
+    sleep 4
 else
-    echo -e "\033[31mNo initramfs or rootfs parameters found in boot command line.\033[0m"
+    echo "\033[31mNo initramfs or rootfs parameters found in boot command line.\033[0m"
+    sleep 4
 fi
 
 # Output ramdisk status
 echo ""
 echo "Done! Your system is checked."
+sleep 4
