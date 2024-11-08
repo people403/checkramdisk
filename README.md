@@ -67,12 +67,14 @@ Conclusion
 Changing the status of "RAM disk: no" to "yes" on a device without a ramdisk is actually unnecessary, unless you really need a ramdisk for a special function. Magisk itself is smart enough to work without a ramdisk by modifying the recovery partition. However, if you want to experiment, make sure to make a full backup and understand the risks, because a small mistake can cause the device to bootloop.
 
 ## Run Script With Termux/Terminal
+- allow root for termux
 - pkg install git -y
+- pkg install python -y
 - pkg install tsu -y
 - git clone https://github.com/people403/checkramdisk
 - tsu
 - ls
-- cd checkramdisk
+- cd effectiveramdisk
 - ls
-- sh checkramdisk.sh
+- python effectiveramdisk.py
 - done!
