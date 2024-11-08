@@ -74,7 +74,7 @@ Changing the status of "RAM disk: no" to "yes" on a device without a ramdisk is 
 - git clone https://github.com/people403/checkramdisk
 - tsu
 - ls
-- cd effectiveramdisk
+- cd checkramdisk
 - ls
 - python effectiveramdisk.py
 - done!
