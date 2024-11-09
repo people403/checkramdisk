@@ -70,7 +70,7 @@ Changing the status of "RAM disk: no" to "yes" on a device without a ramdisk is 
 - allow root for termux
 - pkg install git -y
 - pkg install python -y
-- pkg install tsu -y
+- pkg install tsu
 - git clone https://github.com/people403/checkramdisk
 - tsu
 - ls
