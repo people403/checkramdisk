@@ -4,14 +4,6 @@
 
 import sys, os, time
 
-# Important Package Feature
-os.system("pkg install git -y")
-time.sleep(2)
-os.system("pkg install python -y")
-time.sleep(2)
-os.system("pkg install tsu -y")
-time.sleep(2)
-
 os.system("clear")
 time.sleep(3)
 def cek_ramdisk():
