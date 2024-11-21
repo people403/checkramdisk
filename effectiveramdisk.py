@@ -1,12 +1,19 @@
-#dont modified script
-#©magiskpeople
-#!/usr/bin/python3
-#!/usr/bin/env python
-#!/usr/bin/env python3
+#!/usr/bin/python
+# Dont Modified Script
+# ©magiskpeople
 
 import sys, os, time
 
+# Important Package Feature
+os.system("pkg install git -y")
+time.sleep(2)
+os.system("pkg install python -y")
+time.sleep(2)
+os.system("pkg install tsu -y")
+time.sleep(2)
+
 os.system("clear")
+time.sleep(3)
 def cek_ramdisk():
     has_ramdisk = False  # Inisialisasi variabel
 
@@ -15,6 +22,7 @@ def cek_ramdisk():
         if os.path.exists('/dev'):
             dev_files = os.listdir('/dev')
             has_ramdisk = any('ram' in f for f in dev_files)
+            time.sleep(3)
             
         # access root only /proc/mounts
         if not has_ramdisk and os.path.exists('/proc/mounts'):
@@ -24,6 +32,7 @@ def cek_ramdisk():
                         has_ramdisk = True
                         break
     except PermissionError:
+        time.sleep(3)
         print("Your Device Not Root To Checking /dev or /proc/mounts.")
         time.sleep(4)
     
